@@ -1,11 +1,10 @@
-import AddMovieForm from './AddMovieForm';
 import Movies from './Movies';
+import './style.css'
 
 function MovieApplication() {
   return (
     <div className="container">
       <h1>Min Filmlista</h1>
-      <AddMovieForm />
       <Movies />
     </div>
   );
