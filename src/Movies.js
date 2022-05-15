@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
 import Movie from './Movie';
+import OrderByAlphaButton from './OrderByAlphaButton';
 
 
-function Movies() {
+export default function Movies() {
     const [movies, setMovies] = useState([{
         id: 1,
         title: "Star wars",
@@ -42,6 +43,9 @@ function Movies() {
         setMovies(movies.filter((item) => item.id !== id));
     }
 
+    function sortMovies() {
+        
+    }
 
     return (
         <div>
@@ -72,6 +76,7 @@ function Movies() {
             <ul className="list-group" id="movie-list">
                 {movies.map(movie => <Movie key={movie.id} item={movie} deleteMovie={deleteMovie} />) }
             </ul>
+            <OrderByAlphaButton item={movies} sortMovies={sortMovies} />
 
 
         </div>
@@ -79,4 +84,3 @@ function Movies() {
 }
 
 
-export default Movies;
