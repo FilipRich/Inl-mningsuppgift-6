@@ -72,6 +72,8 @@ function Movies() {
             <ul className="list-group" id="movie-list">
                 {movies.map(movie => <Movie key={movie.id} item={movie} deleteMovie={deleteMovie} />) }
             </ul>
+
+
         </div>
     );
 }
