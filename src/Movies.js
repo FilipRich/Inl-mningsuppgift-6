@@ -8,7 +8,8 @@ function Movies() {
         title: "Star wars",
         rating: 4
     }]);
-    
+
+
     const titleRef = useRef();
     const ratingRef = useRef();
 
